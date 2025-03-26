@@ -5,31 +5,33 @@ from logging.handlers import RotatingFileHandler
 
 
 #Bot token @Botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "6972029110:AAE7p6rF7fCwXjruQCn_dXXB59HOGlgzBNU")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "7566423124:AAEWm6SMbQdV7W9NywaGNRqYnn6TAYRJnOo")
 #Your API ID from my.telegram.org
-APP_ID = int(os.environ.get("APP_ID", "17417255"))
+APP_ID = int(os.environ.get("APP_ID", "27322718"))
 #Your API Hash from my.telegram.org
-API_HASH = os.environ.get("API_HASH", "73d424d9847f968130cd5b41946f7a5d")
+API_HASH = os.environ.get("API_HASH", "4f6d1b67cf101aea5cf0536885aa1b82")
 #Your db channel Id
-CHANNEL_ID = os.environ.get("CHANNEL_ID", "@BatchBotLog")
+CHANNEL_ID = os.environ.get("CHANNEL_ID", "@seishirolog")
 # NAMA OWNER
-OWNER = os.environ.get("OWNER", "DARKXSIDE78")
+OWNER = os.environ.get("OWNER", "ADITYA ABHINAV")
 #OWNER ID
-OWNER_ID = int(os.environ.get("OWNER_ID", "7086472788"))
+OWNER_ID = int(os.environ.get("OWNER_ID", "6701907262"))
 #Port
 PORT = os.environ.get("PORT", "8030")
 #Database
-DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://nitinkumardhundhara:DARKXSIDE78@cluster0.wdive.mongodb.net/?retryWrites=true&w=majority")
-DB_NAME = os.environ.get("DATABASE_NAME", "unknown")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://seishiroatanime:Y3FQIzJbCXMWQc9S@cluster0.ymttr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DB_NAME = os.environ.get("DATABASE_NAME", "cluster0")
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = os.environ.get("FORCE_SUB_CHANNEL", "@rezero_dual_audio_01")
-FORCE_SUB_CHANNEL2 = os.environ.get("FORCE_SUB_CHANNEL2", "@GenAnimeOfc")
-FORCE_SUB_CHANNEL3 = os.environ.get("FORCE_SUB_CHANNEL3", "@HeroOrganizationManga")
+FORCE_SUB_CHANNEL = os.environ.get("FORCE_SUB_CHANNEL", "@seishiro_atanime")
+FORCE_SUB_CHANNEL2 = os.environ.get("FORCE_SUB_CHANNEL2", "@seishiro_anime_is")
+FORCE_SUB_CHANNEL3 = os.environ.get("FORCE_SUB_CHANNEL3", "@seishiro_at_anime_engsub")
+FORCE_SUB_CHANNEL4 = os.environ.get("FORCE_SUB_CHANNEL4", "@seishiro_anime_is_hindidub")
+
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
-FILE_AUTO_DELETE = int(os.getenv("FILE_AUTO_DELETE", "7200")) # auto delete in seconds
+FILE_AUTO_DELETE = int(os.getenv("FILE_AUTO_DELETE", "900")) # auto delete in seconds
 
 START_PIC = os.environ.get("START_PIC", "https://wallpapers.com/images/hd/naruto-final-form-1920-x-1200-qmz41z5fd42hgr3y.jpg")
 FORCE_PIC = os.environ.get("FORCE_PIC", "https://wallpapers.com/images/hd/naruto-final-form-1920-x-1200-qmz41z5fd42hgr3y.jpg")
@@ -37,7 +39,7 @@ FORCE_PIC = os.environ.get("FORCE_PIC", "https://wallpapers.com/images/hd/naruto
 START_MSG = os.environ.get("START_MESSAGE", "<b>ʙᴀᴋᴋᴀᴀᴀ!!! <b>{first}</b>\n\n ɪ ᴀᴍ ғɪʟᴇ sᴛᴏʀᴇ ʙᴏᴛ, ɪ ᴄᴀɴ sᴛᴏʀᴇ ᴘʀɪᴠᴀᴛᴇ ғɪʟᴇs ɪɴ sᴘᴇᴄɪғɪᴇᴅ ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴏᴛʜᴇʀ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ɪᴛ ғʀᴏᴍ sᴘᴇᴄɪᴀʟ ʟɪɴᴋ.</b>")
 try:
     ADMINS=[6376328008]
-    for x in (os.environ.get("ADMINS", "6302971969 2077116559 1785065025 6844586745").split()):
+    for x in (os.environ.get("ADMINS", "8156773974  6546791787").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
@@ -58,7 +60,7 @@ BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
 USER_REPLY_TEXT = "<b>ʙᴀᴋᴋᴀᴀᴀ! ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴍʏ ꜱᴇɴᴘᴀɪ!!!</b>"
 
 ADMINS.append(OWNER_ID)
-ADMINS.append(7086472788)
+ADMINS.append(6701907262)
 
 LOG_FILE_NAME = "bot.txt"
 
