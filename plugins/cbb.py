@@ -12,8 +12,8 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     "<b>○ Cʀᴇᴀᴛᴏʀ: <a href='https://t.me/seishiro_atanime'>Seishiro Anime Team</a>\n"
     "○ Lᴀɴɢᴜᴀɢᴇ: <a href='https://www.python.org/downloads/'>Pʏᴛʜᴏɴ</a>\n"
     "○ Lɪʙʀᴀʀʏ: <a href='https://github.com/pyrogram/pyrogram'>Pʏʀᴏɢʀᴀᴍ</a>\n"
-    "○ Mᴀɪɴ Cʜᴀɴɴᴇʟ: <a href='https://t.me/genanimeofc'>Gᴇɴ Aɴɪᴍᴇ</a>\n"
-    "○ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ: <a href='https://t.me/Genanimeofcchat'>Gᴇɴ Cʜᴀᴛ</a></b>"
+    "○ Mᴀɪɴ Cʜᴀɴɴᴇʟ: <a href='https://t.me/seishiro_atanime'>Seishiro At Anime</a>\n"
+    "○ Sᴜᴘᴘᴏʀᴛ Cʜᴀɴɴᴇʟ: <a href='https://t.me/seishiro_anime_is'>Seishiro Anime </a></b>"
 ),
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
