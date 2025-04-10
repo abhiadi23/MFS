@@ -9,7 +9,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     if data == "about":
         await query.message.edit_text(
             text = (
-    "<b>○ Cʀᴇᴀᴛᴏʀ: <a href='https://t.me/Darkxside78'>DARKXSIDE78</a>\n"
+    "<b>○ Cʀᴇᴀᴛᴏʀ: <a href='https://t.me/seishiro_atanime'>Seishiro Anime Team</a>\n"
     "○ Lᴀɴɢᴜᴀɢᴇ: <a href='https://www.python.org/downloads/'>Pʏᴛʜᴏɴ</a>\n"
     "○ Lɪʙʀᴀʀʏ: <a href='https://github.com/pyrogram/pyrogram'>Pʏʀᴏɢʀᴀᴍ</a>\n"
     "○ Mᴀɪɴ Cʜᴀɴɴᴇʟ: <a href='https://t.me/genanimeofc'>Gᴇɴ Aɴɪᴍᴇ</a>\n"
