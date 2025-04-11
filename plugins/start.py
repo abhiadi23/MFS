@@ -9,8 +9,8 @@ from helper_func import subscribed, encode, decode, get_messages
 from database.db import add_user, del_user, full_userbase, present_user
 from pyrogram.types import Message
 
-Seishiro at anime= FILE_AUTO_DELETE
-[Aᴅɪᴛʏᴀ Aʙʜɪɴᴀᴠ] = Seishiro at anime 
+Seishiroatanime= FILE_AUTO_DELETE
+[Aᴅɪᴛʏᴀ Aʙʜɪɴᴀᴠ] = Seishiroatanime 
 file_auto_delete = humanize.naturaldelta([Aᴅɪᴛʏᴀ Aʙʜɪɴᴀᴠ])
 
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
