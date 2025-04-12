@@ -10,8 +10,8 @@ from database.db import add_user, del_user, full_userbase, present_user
 from pyrogram.types import Message
 
 Seishiroatanime= FILE_AUTO_DELETE
-[AᴅɪᴛʏᴀAʙʜɪɴᴀᴠ] = Seishiroatanime 
-file_auto_delete = humanize.naturaldelta([AᴅɪᴛʏᴀAʙʜɪɴᴀᴠ])
+AᴅɪᴛʏᴀAʙʜɪɴᴀᴠ = Seishiroatanime 
+file_auto_delete = humanize.naturaldelta(AᴅɪᴛʏᴀAʙʜɪɴᴀᴠ)
 
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
 async def start_command(client: Client, message: Message):
