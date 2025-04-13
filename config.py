@@ -11,7 +11,7 @@ APP_ID = int(os.environ.get("APP_ID", "27322718"))
 #Your API Hash from my.telegram.org
 API_HASH = os.environ.get("API_HASH", "4f6d1b67cf101aea5cf0536885aa1b82")
 #Your db channel Id
-CHANNEL_ID = os.environ.get("CHANNEL_ID", "@seishiro_log_forbot")
+CHANNEL_ID = os.environ.get("CHANNEL_ID", "-1002043241733")
 # NAMA OWNER
 OWNER = os.environ.get("OWNER", "ADITYA ABHINAV")
 #OWNER ID
@@ -23,10 +23,10 @@ DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://abhinavaditya035:YtKy9wcK
 DB_NAME = os.environ.get("DATABASE_NAME", "cluster0")
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = os.environ.get("FORCE_SUB_CHANNEL", "@seishiro_atanime")
-FORCE_SUB_CHANNEL2 = os.environ.get("FORCE_SUB_CHANNEL2", "@seishiro_at_anime_engsub")
-FORCE_SUB_CHANNEL3 = os.environ.get("FORCE_SUB_CHANNEL3", "@seishiro_anime_is")
-FORCE_SUB_CHANNEL4 = os.environ.get("FORCE_SUB_CHANNEL4", "@seishiro_anime_is_hindidub")
+FORCE_SUB_CHANNEL = os.environ.get("FORCE_SUB_CHANNEL", "")
+FORCE_SUB_CHANNEL2 = os.environ.get("FORCE_SUB_CHANNEL2", "")
+FORCE_SUB_CHANNEL3 = os.environ.get("FORCE_SUB_CHANNEL3", "")
+FORCE_SUB_CHANNEL4 = os.environ.get("FORCE_SUB_CHANNEL4", "")
 
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
