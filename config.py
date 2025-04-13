@@ -23,10 +23,10 @@ DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://abhinavaditya035:YtKy9wcK
 DB_NAME = os.environ.get("DATABASE_NAME", "cluster0")
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = os.environ.get("FORCE_SUB_CHANNEL", "0")
-FORCE_SUB_CHANNEL2 = os.environ.get("FORCE_SUB_CHANNEL2", "0")
-FORCE_SUB_CHANNEL3 = os.environ.get("FORCE_SUB_CHANNEL3", "0")
-FORCE_SUB_CHANNEL4 = os.environ.get("FORCE_SUB_CHANNEL4", "0")
+FORCE_SUB_CHANNEL = os.environ.get("FORCE_SUB_CHANNEL", "")
+FORCE_SUB_CHANNEL2 = os.environ.get("FORCE_SUB_CHANNEL2", "")
+FORCE_SUB_CHANNEL3 = os.environ.get("FORCE_SUB_CHANNEL3", "")
+FORCE_SUB_CHANNEL4 = os.environ.get("FORCE_SUB_CHANNEL4", "")
 
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
