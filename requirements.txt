@@ -1,13 +1,22 @@
-# --- For-Bot-Working --------- #
-pyrofork
+#https://codeload.github.com/KurimuzonAkuma/pyrogram/zip/refs/heads/dev
+pyrofork==2.3.45 
 TgCrypto
-python-dotenv
+pyromod==1.5
+humanize
+schedule
+APscheduler
 # --- For-Database ------------ #
 pymongo
+motor
 dnspython
 # --- For-Web-Response ------- #
 aiohttp
-humanize
-pillow
+python-dotenv
+# --- For-Web-Response ------- #
+pytz
+requests
+bs4
+shortzy
+aiofiles
 asyncio
-motor
+
