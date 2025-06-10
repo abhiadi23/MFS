@@ -1,12 +1,14 @@
+# --- For-Bot-Working --------- #
 pyrofork
-tgcrypto==1.2.5
-motor==3.3.1
-dnspython==2.4.2
-humanize==4.9.0
-python-dotenv==1.0.0
-aiofiles==23.2.1
-pytz==2023.3
-pymongo==4.5.0
+TgCrypto
+pyromod==1.5
+python-dotenv
+# --- For-Database ------------ #
+pymongo
+dnspython
+# --- For-Web-Response ------- #
 aiohttp
-requests==2.31.0
-rich==13.7.0
+humanize
+pillow
+asyncio
+motor
