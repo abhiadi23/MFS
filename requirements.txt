@@ -1,8 +1,9 @@
 # --- For-Bot-Working --------- #
-pyrofork
+pyrofork==2.3.45
 TgCrypto
 python-dotenv
 # --- For-Database ------------ #
+pyromod
 pymongo
 dnspython
 # --- For-Web-Response ------- #
