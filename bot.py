@@ -2,7 +2,7 @@ import pyrogram.utils
 from aiohttp import web
 from plugins import web_server
 
-from pyrogram import Client
+from pyrogram import Client, utils
 from pyrogram.enums import ParseMode
 import sys
 from datetime import datetime
