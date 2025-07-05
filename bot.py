@@ -114,4 +114,4 @@ class Bot(Client):
         await super().stop()
         self.LOGGER(__name__).info("Bot Stopped...")
 
-pyrogram.utils.MIN_CHANNEL_ID = -1001839965169
+pyrogram.utils.MIN_CHANNEL_ID = -1002640844597
