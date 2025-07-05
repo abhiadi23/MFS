@@ -82,7 +82,7 @@ class Bot(Client):
             # If the CHANNEL_ID is private (starts with -100), join it first
             if str(CHANNEL_ID).startswith("-100"):
                 try:
-                    invite_link = await self.export_chat_invite_link(CHANNEL_ID)
+                    invite_link = "https://t.me/+L9MkdABujHQxZDZl
                     await self.join_chat(invite_link)
                 except Exception as join_err:
                     self.LOGGER(__name__).warning(f"Couldn’t join channel: {join_err}")
@@ -115,4 +115,4 @@ class Bot(Client):
         self.LOGGER(__name__).info("Bot Stopped...")
 
 pyrogram.utils.MIN_CHANNEL_ID = -1002640844591
-await self.join_chat("https://t.me/+L9MkdABujHQxZDZl")
+
