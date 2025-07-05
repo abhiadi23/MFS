@@ -1,3 +1,4 @@
+import pyrogram.utils
 from aiohttp import web
 from plugins import web_server
 
@@ -101,6 +102,5 @@ class Bot(Client):
     async def stop(self, *args):
         await super().stop()
         self.LOGGER(__name__).info("Bot Stopped...")
-        import pyrogram.utils
 
 pyrogram.utils.MIN_CHANNEL_ID = -1002640844591
