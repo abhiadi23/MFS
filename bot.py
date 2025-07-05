@@ -80,11 +80,20 @@ class Bot(Client):
                 self.LOGGER(__name__).warning(f"Pʟᴇᴀsᴇ Dᴏᴜʙʟᴇ ᴄʜᴇᴄᴋ ᴛʜᴇ FORCE-SUB-CHANNEL ᴠᴀʟᴜᴇ ᴀɴᴅ Mᴀᴋᴇ sᴜʀᴇ Bᴏᴛ ɪs Aᴅᴍɪɴ ɪɴ ᴄʜᴀɴɴᴇʟ ᴡɪᴛʜ Iɴᴠɪᴛᴇ Usᴇʀs ᴠɪᴀ Lɪɴᴋ Pᴇʀᴍɪssɪᴏɴ, Cᴜʀʀᴇɴᴛ Fᴏʀᴄᴇ Sᴜʙ Cʜᴀɴɴᴇʟ Vᴀʟᴜᴇ﹕ {FORCE_SUB_CHANNEL3}")
                 sys.exit()
                 
+       try:
+    db_channel = await self.get_chat(CHANNEL_ID)
+    self.db_channel = db_channel
+
+    # 🔐 FORCE JOIN using invite link if private
+    if str(CHANNEL_ID).startswith("-100") and not db_channel.username:
         try:
-            db_channel = await self.get_chat(CHANNEL_ID)
-            self.db_channel = db_channel
-            test = await self.send_message(chat_id = db_channel.id, text = "Tʜɪs Is ᴀ Tᴇsᴛ Mᴇssᴀɢᴇ")
-            await test.delete()
+            await self.join_chat(db_channel.id)
+        except Exception as join_err:
+            self.LOGGER(name).warning(f"Couldn’t join channel: {join_err}")
+
+    # ✅ Interaction that ensures bot “knows” the channel
+    test = await self.send_message(chat_id=db_channel.id, text="Tʜɪs Is ᴀ Tᴇsᴛ Mᴇssᴀɢᴇ")
+    await test.delete()
         except Exception as e:
             self.LOGGER(__name__).warning(e)
             self.LOGGER(__name__).warning(f"Mᴀᴋᴇ Sᴜʀᴇ ʙᴏᴛ ɪs Aᴅᴍɪɴ ɪɴ DB Cʜᴀɴɴᴇʟ, ᴀɴᴅ Dᴏᴜʙʟᴇ ᴄʜᴇᴄᴋ ᴛʜᴇ CHANNEL-ID Vᴀʟᴜᴇ, Cᴜʀʀᴇɴᴛ Vᴀʟᴜᴇ {CHANNEL_ID}")
