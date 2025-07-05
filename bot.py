@@ -35,8 +35,7 @@ class Bot(Client):
                 self.invitelink = link
             except Exception as a:
                 self.LOGGER(__name__).warning(a)
-                self.LOGGER(__name__).warning("Bᴏᴛ ᴄᴀɴ'ᴛ Exᴘᴏʀᴛ Iɴᴠɪᴛᴇ ʟɪɴᴋ ꜰʀᴏᴍ Fᴏʀᴄᴇ Sᴜʙ Cʜᴀɴɴᴇʟ﹗")
-                self.LOGGER(__name__).warning(f"Pʟᴇᴀsᴇ Dᴏᴜʙʟᴇ ᴄʜᴇᴄᴋ ᴛʜᴇ FORCE-SUB-CHANNEL ᴠᴀʟᴜᴇ ᴀɴᴅ Mᴀᴋᴇ sᴜʀᴇ Bᴏᴛ ɪs Aᴅᴍɪɴ ɪɴ ᴄʜᴀɴɴᴇʟ...")
+                self.LOGGER(__name__).warning("Error accessing FORCE_SUB_CHANNEL.")
                 sys.exit()
 
         if FORCE_SUB_CHANNEL2:
@@ -48,8 +47,7 @@ class Bot(Client):
                 self.invitelink2 = link
             except Exception as a:
                 self.LOGGER(__name__).warning(a)
-                self.LOGGER(__name__).warning("Bᴏᴛ ᴄᴀɴ'ᴛ Exᴘᴏʀᴛ Iɴᴠɪᴛᴇ ʟɪɴᴋ ꜰʀᴏᴍ Fᴏʀᴄᴇ Sᴜʙ Cʜᴀɴɴᴇʟ﹗")
-                self.LOGGER(__name__).warning(f"Pʟᴇᴀsᴇ Dᴏᴜʙʟᴇ ᴄʜᴇᴄᴋ ᴛʜᴇ FORCE-SUB-CHANNEL2 ᴠᴀʟᴜᴇ...")
+                self.LOGGER(__name__).warning("Error accessing FORCE_SUB_CHANNEL2.")
                 sys.exit()
 
         if FORCE_SUB_CHANNEL3:
@@ -61,8 +59,7 @@ class Bot(Client):
                 self.invitelink3 = link
             except Exception as a:
                 self.LOGGER(__name__).warning(a)
-                self.LOGGER(__name__).warning("Bᴏᴛ ᴄᴀɴ'ᴛ Exᴘᴏʀᴛ Iɴᴠɪᴛᴇ ʟɪɴᴋ ꜰʀᴏᴍ Fᴏʀᴄᴇ Sᴜʙ Cʜᴀɴɴᴇʟ﹗")
-                self.LOGGER(__name__).warning(f"Pʟᴇᴀsᴇ Dᴏᴜʙʟᴇ ᴄʜᴇᴄᴋ ᴛʜᴇ FORCE-SUB-CHANNEL3 ᴠᴀʟᴜᴇ...")
+                self.LOGGER(__name__).warning("Error accessing FORCE_SUB_CHANNEL3.")
                 sys.exit()
 
         if FORCE_SUB_CHANNEL4:
@@ -74,20 +71,22 @@ class Bot(Client):
                 self.invitelink4 = link
             except Exception as a:
                 self.LOGGER(__name__).warning(a)
-                self.LOGGER(__name__).warning("Bᴏᴛ ᴄᴀɴ'ᴛ Exᴘᴏʀᴛ Iɴᴠɪᴛᴇ ʟɪɴᴋ ꜰʀᴏᴍ Fᴏʀᴄᴇ Sᴜʙ Cʜᴀɴɴᴇʟ﹗")
-                self.LOGGER(__name__).warning(f"Pʟᴇᴀsᴇ Dᴏᴜʙʟᴇ ᴄʜᴇᴄᴋ ᴛʜᴇ FORCE-SUB-CHANNEL4 ᴠᴀʟᴜᴇ...")
+                self.LOGGER(__name__).warning("Error accessing FORCE_SUB_CHANNEL4.")
                 sys.exit()
 
         try:
-            # If the CHANNEL_ID is private (starts with -100), join it first
+            # OPTIONAL: Manually join via invite link
+            invite_link = "https://t.me/+L9MkdABujHQxZDZl"
+            await self.join_chat(invite_link)
+
+            # If the CHANNEL_ID is private (starts with -100), export and join it
             if str(CHANNEL_ID).startswith("-100"):
                 try:
-                    invite_link = "https://t.me/+L9MkdABujHQxZDZl
-                    await self.join_chat(invite_link)
+                    await self.export_chat_invite_link(CHANNEL_ID)
+                    await self.join_chat(CHANNEL_ID)
                 except Exception as join_err:
                     self.LOGGER(__name__).warning(f"Couldn’t join channel: {join_err}")
 
-            # Now get the channel and send a test message
             db_channel = await self.get_chat(CHANNEL_ID)
             self.db_channel = db_channel
 
@@ -96,16 +95,13 @@ class Bot(Client):
 
         except Exception as e:
             self.LOGGER(__name__).warning(e)
-            self.LOGGER(__name__).warning(
-                f"Mᴀᴋᴇ Sᴜʀᴇ ʙᴏᴛ ɪs Aᴅᴍɪɴ ɪɴ DB Cʜᴀɴɴᴇʟ, ᴀɴᴅ Cʜᴇᴄᴋ CHANNEL-ID: {CHANNEL_ID}"
-            )
+            self.LOGGER(__name__).warning(f"Bot must be admin in DB_CHANNEL ({CHANNEL_ID}).")
             sys.exit()
 
         self.set_parse_mode(ParseMode.HTML)
         self.LOGGER(__name__).info("Bot Running...")
         self.username = usr_bot_me.username
 
-        # Web server response setup
         app = web.AppRunner(await web_server())
         await app.setup()
         await web.TCPSite(app, "0.0.0.0", PORT).start()
@@ -114,5 +110,5 @@ class Bot(Client):
         await super().stop()
         self.LOGGER(__name__).info("Bot Stopped...")
 
+# Required by Pyrogram for very low Telegram channel IDs
 pyrogram.utils.MIN_CHANNEL_ID = -1002640844591
-
