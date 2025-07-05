@@ -115,3 +115,4 @@ class Bot(Client):
         self.LOGGER(__name__).info("Bot Stopped...")
 
 pyrogram.utils.MIN_CHANNEL_ID = -1002640844591
+await self.join_chat("https://t.me/+L9MkdABujHQxZDZl")
