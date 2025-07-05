@@ -9,11 +9,11 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     if data == "about":
         await query.message.edit_text(
             text = (
-    "<b>○ Cʀᴇᴀᴛᴏʀ: <a href='https://t.me/seishiro_atanime'>Seishiro Anime Team</a>\n"
+    "<b>○ Cʀᴇᴀᴛᴏʀ: <a href='https://t.me/ROHITREDDY69'>Rᴏʜɪᴛ</a>\n"
     "○ Lᴀɴɢᴜᴀɢᴇ: <a href='https://www.python.org/downloads/'>Pʏᴛʜᴏɴ</a>\n"
     "○ Lɪʙʀᴀʀʏ: <a href='https://github.com/pyrogram/pyrogram'>Pʏʀᴏɢʀᴀᴍ</a>\n"
-    "○ Mᴀɪɴ Cʜᴀɴɴᴇʟ: <a href='https://t.me/seishiro_atanime'>Seishiro At Anime</a>\n"
-    "○ Sᴜᴘᴘᴏʀᴛ Cʜᴀɴɴᴇʟ: <a href='https://t.me/seishiro_anime_is'>Seishiro Anime </a></b>"
+    "○ Mᴀɪɴ Cʜᴀɴɴᴇʟ: <a href='https://t.me/ANIELITEMOVIES'>Anielite Movies</a>\n"
+    "○ Sᴜᴘᴘᴏʀᴛ Cʜᴀɴɴᴇʟ: <a href='https://t.me/anielitemovieschat'>Anilite Chat group</a></b>"
 ),
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
@@ -30,7 +30,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             reply_markup = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("⚡️ ᴍᴀɪɴ ʜᴜʙ", url= "https://t.me/genanimeofc"),
+                        InlineKeyboardButton("⚡️ ᴍᴀɪɴ ʜᴜʙ", url= "https://t.me/ANIELITEMOVIES"),
                     ],
                     [
                     InlineKeyboardButton("🛈 ᴀʙᴏᴜᴛ", callback_data = "about"),
