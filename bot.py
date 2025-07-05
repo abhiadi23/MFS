@@ -103,4 +103,4 @@ class Bot(Client):
         self.LOGGER(__name__).info("Bot Stopped...")
         import pyrogram.utils
 
-pyrogram.utils.MIN_CHANNEL_ID = -1002640844591
+pyrogram.utils.MIN_CHANNEL_ID = 
