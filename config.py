@@ -16,6 +16,16 @@ CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002640844591"))
 OWNER = os.environ.get("OWNER", "ROHIT")
 #OWNER ID
 OWNER_ID = int(os.environ.get("OWNER_ID", "7845335174"))
+# Admins (space-separated IDs in string, then converted to int list)
+ADMINS = set()
+for x in os.environ.get("ADMINS", "7845335174").split():
+    try:
+        ADMINS.add(int(x))
+    except ValueError:
+        print(f"⚠️ Invalid admin ID: {x}")
+ADMINS.add(OWNER_ID)  # Always include OWNER
+ADMINS = list(ADMINS)  # Convert to list for compatibility
+
 #Port
 PORT = os.environ.get("PORT", "8030")
 #Database
