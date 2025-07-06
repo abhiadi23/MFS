@@ -15,7 +15,7 @@ CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002640844591"))
 # NAMA OWNER
 OWNER = os.environ.get("OWNER", "ROHIT")
 #OWNER ID
-ADMINS = int(os.environ.get("ADMINS", "7845335174"))
+OWNER ID = int(os.environ.get("OWNER ID", "7845335174"))
 #Port
 PORT = os.environ.get("PORT", "8030")
 #Database
@@ -38,8 +38,8 @@ FORCE_PIC = os.environ.get("FORCE_PIC", "https://wallpapers.com/images/hd/naruto
 
 START_MSG = os.environ.get("START_MESSAGE", "<b>ʙᴀᴋᴋᴀᴀᴀ!!! <b>{first}</b>\n\n ɪ ᴀᴍ ғɪʟᴇ sᴛᴏʀᴇ ʙᴏᴛ, ɪ ᴄᴀɴ sᴛᴏʀᴇ ᴘʀɪᴠᴀᴛᴇ ғɪʟᴇs ɪɴ sᴘᴇᴄɪғɪᴇᴅ ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴏᴛʜᴇʀ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ɪᴛ ғʀᴏᴍ sᴘᴇᴄɪᴀʟ ʟɪɴᴋ.</b>")
 try:
-    ADMINS=[6376328008]
-    for x in (os.environ.get("ADMINS", "6701907262").split()):
+    ADMINS=[7845335174]
+    for x in (os.environ.get("ADMINS", "7845335174").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
@@ -60,7 +60,7 @@ BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
 USER_REPLY_TEXT = "<b>ʙᴀᴋᴋᴀᴀᴀ! ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴍʏ ꜱᴇɴᴘᴀɪ!!!</b>"
 
 ADMINS.append(OWNER_ID)
-ADMINS.append(6701907262)
+ADMINS.append(7845335174)
 
 LOG_FILE_NAME = "bot.txt"
 
