@@ -1,18 +1,20 @@
 FROM python:3.10-slim
 
-# Install build dependencies for TgCrypto and Python packages
-RUN apt-get update && apt-get install -y 
+# System dependencies for Pyrogram and TgCrypto
+RUN apt-get update && apt-get install -y gcc build-essential ffmpeg
 
-# Set working directory
+# Set workdir
 WORKDIR /app
 
-# Copy requirements and install dependencies
+# Copy requirement file and install
 COPY requirements.txt .
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy bot files
+# Copy all files
 COPY . .
 
+# Render uses port passed via $PORT env, though Telegram bots don’t need a port
+EXPOSE 10000
 
-# Command to run the bot
+# Start the bot
 CMD ["python3", "main.py"]
