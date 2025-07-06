@@ -1,13 +1,7 @@
 FROM python:3.10-slim
 
 # Install build dependencies for TgCrypto and Python packages
-RUN apt-get update && apt-get install -y \
-    gcc \
-    python3-dev \
-    build-essential \
-    libffi-dev \
-    libssl-dev \
-    && apt-get clean
+RUN apt-get update && apt-get install -y 
 
 # Set working directory
 WORKDIR /app
